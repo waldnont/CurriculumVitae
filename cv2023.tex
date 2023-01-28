@@ -1,0 +1,212 @@
+%% Use the "normalphoto" option if you want a normal photo instead of cropped to a circle
+% \documentclass[10pt,a4paper,normalphoto]{altacv}
+
+\documentclass[10pt,a4paper,ragged2e,withhyper]{altacv}
+%% AltaCV uses the fontawesome5 and packages.
+%% See http://texdoc.net/pkg/fontawesome5 for full list of symbols.
+
+% Change the page layout if you need to
+\geometry{left=1.25cm,right=1.25cm,top=1.5cm,bottom=1.5cm,columnsep=1.2cm}
+
+% The paracol package lets you typeset columns of text in parallel
+\usepackage{paracol}
+
+% Change the font if you want to, depending on whether
+% you're using pdflatex or xelatex/lualatex
+\ifxetexorluatex
+  % If using xelatex or lualatex:
+  \setmainfont{Raleway SemiBold}
+%   \setsansfont{Lato}
+\usepackage[T1]{fontenc}
+\usepackage[default]{raleway}
+  \renewcommand{\familydefault}{\sfdefault}
+\else
+  % If using pdflatex:
+  \usepackage[rm]{roboto}
+  \usepackage[defaultsans]{lato}
+  % \usepackage{sourcesanspro}
+  \renewcommand{\familydefault}{\sfdefault}
+\fi
+
+% Change the colours if you want to
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{666666}
+% \definecolor{DarkPastelRed}{HTML}{450808}
+% \definecolor{PastelRed}{HTML}{8F0D0D}
+% \definecolor{GoldenEarth}{HTML}{E7D192}
+\colorlet{name}{black}
+\colorlet{tagline}{black}
+\colorlet{goal}{LightGrey}
+\colorlet{heading}{black}
+\colorlet{headingrule}{black}
+\colorlet{subheading}{black}
+\colorlet{accent}{black}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+% Change some fonts, if necessary
+% \renewcommand{\namefont}{\Huge\rmfamily\bfseries}
+\renewcommand{\personalinfofont}{\footnotesize}
+% \renewcommand{\cvsectionfont}{\LARGE\rmfamily\bfseries}
+% \renewcommand{\cvsubsectionfont}{\large\bfseries}
+
+% Change the bullets for itemize and rating marker
+% for \cvskill if you want to
+\renewcommand{\itemmarker}{{\small\textbullet}}
+\renewcommand{\ratingmarker}{\faCircle}
+
+\begin{document}
+    \definecolor{payne\'sgrey}{rgb}{0.25, 0.25, 0.28}
+    \begin{tabular}{ c l l l l }
+     \multirow{2}{22em}{{\color{black}\Huge Will Armstrong}} \\
+     \multirow{3.5}{24.4em}{{\color{payne\'sgrey}\Large \hspace{4mm}SYSTEMS PROGRAMMER}} & \phone{(226)-503-2880} & \github{waldnont}\\
+    & \email{waldnont@gmail.com} & \linkedin{waldnont}
+    \end{tabular}
+    
+    \vspace{-\baselineskip}
+    \goal{
+        \begin{center}
+        \hline
+        \vspace{10px}
+            Mainframe programming professional looking to migrate legacy systems. 
+        \vspace{10px}
+        \hline
+        \end{center}
+    }
+    
+    \makecvheader
+    %% Depending on your tastes, you may want to make fonts of itemize environments slightly smaller
+    % \AtBeginEnvironment{itemize}{\small}
+    
+    %% Set the left/right column width ratio to 6:4.
+    \columnratio{0.6}
+    
+    % Start a 2-column paracol. Both the left and right columns will automatically
+    % break across pages if things get too long.
+    \begin{paracol}{2}
+        \cvsection{Work Experience}
+
+        \cvevent{IMS Systems Programmer}{TD Bank}{June 2021 -- Present}{Remote}
+        \begin{itemize}
+            \item Migrated legacy \textbf{Excel (VB.NET)} statistical dashboard to \textbf{Jupyter Notebook} using \textbf{Python (Pandas)} which reduced processing-time from over \textbf{1 hour} to \textbf{3 seconds}
+            \item Implemented a proof-of-concept IMS \textbf{Java} message processing region in \textbf{Unix (OMVS)} that updated application architecture for \textbf{IMS} and \textbf{DB2} workloads
+            \item Integrated \textbf{Splunk Automated Alerting } system with an \textbf{IMS\\ database} and transaction manager to monitor critical system\\ errors and security threats in real-time
+            \item Overhauled project management system and documentation by creating a team \textbf{JIRA} and \textbf{Confluence} wiki as group administrator
+        \end{itemize}
+
+        \medskip
+
+        \cvevent{Application Developer}{Canadian Solar}{Dec. 2020 -- June 2021}{Remote}
+        \begin{itemize}
+            \item Developed \textbf{Excel (VB.NET)} applications to support Portfolio\\ Analysts producing financial projections for newly proposed solar energy power stations in South America
+            \item Configured \textbf{Power Automate} workflow to create support tickets and archive emails when triggered using \textbf{Power Apps} form logic  
+            \item Worked across teams maintaining assembly line servers on\\ production floor during peak operational hours while supervised by Senior Manufacturing Engineer
+        \end{itemize}
+        
+        \medskip
+        
+        \cvevent{Business Systems Analyst Intern}{TD Bank}{May 2020 -- Aug. 2020}{Remote}
+        \begin{itemize}
+            \item Automated 6 hours of manual reporting using \textbf{Alteryx} workflows to produce financial forecasts for Project Analysts across teams
+            \item Created \textbf{Tableau} dashboard analytics for month-end financial and spending reports
+            \item Identified queue of manual reports available for automation that would save over 1,000 monthly hours
+        \end{itemize}
+        
+        \medskip
+        
+        \cvevent{Security Analyst Intern}{TD Bank}{Sept. 2019 -- Dec. 2019}{Toronto, Ontario}
+        \begin{itemize}
+            \item Developed \textbf{SharePoint} portal to create a PCI intake workflow tool and evidence repository
+            \item Attended consultation meetings for projects that provided PCI security reviews across TD Bank
+            \item Deployed \textbf{Tableau} dashboard analytics for the Payment Card\\ Security Team's Sharepoint portal
+    
+        \end{itemize}
+        
+        \medskip
+        
+        % use ONLY \newpage if you want to force a page break for
+        % ONLY the current column
+        \newpage
+        
+        %% Switch to the right column. This will now automatically move to the second
+        %% page if the content is too long.
+        \switchcolumn
+        
+        \cvsection{Education}
+        
+        \cvevent{Bachelor of Technology\\ Software Engineering}{McMaster University}{May 2021 --  May 2023}{}
+        \textit{Enrolled in part-time evening courses}\\
+        \medskip
+        \textbf{Topics of study:} software architecture, web\\ programming, and artificial intelligence\\
+        
+        \divider
+        
+        \cvevent{Advanced Diploma (Co-op\\ 
+        Computer Programming \& Analysis}{Fanshawe College}{2017 -- 2020}{}
+        Awards: Dean's Honour Roll (2017 - 2020)\\
+        
+        %% Yeah I didn't spend too much time making all the
+        %% spacing consistent... sorry. Use \smallskip, \medskip,
+        %% \bigskip, \vspace etc to make adjustments.
+        \medskip
+        
+        \cvsection{Skills}
+            \cvsubsection{Languages}
+            \cvtag{Java}
+            \cvtag{C\#}
+            \cvtag{Python}
+            \cvtag{COBOL}
+            \cvtag{SQL}\\
+            \cvtag{JCL}
+            \cvtag{C++}
+            \cvtag{Bash}
+            
+            \medskip
+            
+            \cvsubsection{Operating Systems}
+            \cvtag{Windows}
+            \cvtag{Linux (Fedora, Ubuntu, etc.)}
+            \cvtag{z/OS}
+            \cvtag{UNIX}
+            \cvtag{Android}
+            
+            \medskip
+            
+            \cvsubsection{Databases}
+            \cvtag{IMS-DB}
+            \cvtag{DB2}
+            \cvtag{SQL Server}
+            \cvtag{MySQL}
+            \cvtag{MS Access}
+            
+            \medskip
+            
+            \cvsubsection{Frameworks}
+            \cvtag{Spring}
+            \cvtag{.NET}
+            
+            \medskip
+            
+            \cvsubsection{Testing}
+            \cvtag{JUnit}
+            \cvtag{MS Test}
+            \cvtag{DL/I}
+            
+            \medskip
+            
+            \cvsubsection{Tools}
+            \cvtag{Git}
+            \cvtag{SMPE}
+            \cvtag{ISPF}
+            \cvtag{SDSF}
+            \cvtag{Endevor}
+            \cvtag{ACF2}
+            \cvtag{Splunk}
+            
+            \medskip
+            
+            \cvsubsection{Cloud}
+            \cvtag{AWS}
+            \cvtag{Microsoft Azure}
+    \end{paracol}
+\end{document}
