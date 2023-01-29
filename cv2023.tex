@@ -1,6 +1,5 @@
 %% Use the "normalphoto" option if you want a normal photo instead of cropped to a circle
 % \documentclass[10pt,a4paper,normalphoto]{altacv}
-
 \documentclass[10pt,a4paper,ragged2e,withhyper]{altacv}
 %% AltaCV uses the fontawesome5 and packages.
 %% See http://texdoc.net/pkg/fontawesome5 for full list of symbols.
@@ -27,7 +26,8 @@
   % \usepackage{sourcesanspro}
   \renewcommand{\familydefault}{\sfdefault}
 \fi
-
+% https://en.wikibooks.org/wiki/LaTeX/Colors
+\usepackage[dvipsnames]{xcolor}
 % Change the colours if you want to
 \definecolor{SlateGrey}{HTML}{2E2E2E}
 \definecolor{LightGrey}{HTML}{666666}
@@ -68,7 +68,7 @@
         \begin{center}
         \hline
         \vspace{10px}
-            Passionate technology professional looking to contribute meaningful project work. 
+            Meticulous technology professional fascinated with information security.
         \vspace{10px}
         \hline
         \end{center}
@@ -86,7 +86,7 @@
     \begin{paracol}{2}
         \cvsection{Work Experience}
 
-        \cvevent{System Programmer}{TD Bank}{June 2021 -- Present}{Remote}
+        \cvevent{System Programmer}{Database Technical Services - TD Bank}{June 2021 -- Present}{Remote}
         \begin{itemize}
             \item Maintained IMS database and transaction manager using \textbf{ System Modification Program/Extended (SMP/E)} to support the environment for Host-Operations and Application Developers
             \item Migrated legacy \textbf{Excel (VB.NET)} statistical dashboard to \textbf{Jupyter Notebook} using \textbf{Python (Pandas)} reducing processing-time from over \textbf{20 minutes} to \textbf{3 seconds}
@@ -96,29 +96,28 @@
 
         \medskip
 
-        \cvevent{System Support Analyst}{Canadian Solar}{Dec. 2020 -- June 2021}{Remote}
+        \cvevent{System Support Analyst}{Information Technology - Canadian Solar}{Dec. 2020 -- June 2021}{Remote}
         \begin{itemize}
             \item Developed \textbf{Excel (VB.NET)} applications to support Portfolio\\ Analysts drafting financial projections for newly proposed solar energy power stations in South America
             \item Configured \textbf{Power Automate} workflow to create support tickets and archive emails when triggered using \textbf{Power Apps} form logic  
-            \item Worked across teams maintaining assembly line servers on\\ production floor during peak operational hours while supervised by Senior Manufacturing Engineer
         \end{itemize}
         
         \medskip
         
-        \cvevent{Business System Analyst Intern}{TD Bank}{May 2020 -- Aug. 2020}{Remote}
+        \cvevent{Business System Analyst Intern}{Project Management Enablement - TD Bank}{May 2020 -- Aug. 2020}{Remote}
         \begin{itemize}
             \item Automated 6 hours of manual reporting using \textbf{Alteryx} workflows to produce financial forecasts for Project Analysts across teams
             \item Created \textbf{Tableau} dashboard analytics for month-end financial and spending reports
-            \item Identified queue of manual reports available for automation that would save over 1,000 monthly hours
         \end{itemize}
         
         \medskip
         
-        \cvevent{Information Security Analyst Intern}{TD Bank}{Sept. 2019 -- Dec. 2019}{Toronto, Ontario}
+        \cvevent{Information Security Analyst Intern}{\textcolor{ForestGreen}{Payment Card Security Team} - TD Bank}{Sept. 2019 -- Dec. 2019}{Toronto, Ontario}
         \begin{itemize}
-            \item Developed \textbf{SharePoint} portal to create a PCI intake workflow tool and evidence repository
-            \item Attended consultation meetings for projects that provided PCI security reviews across TD Bank
-            \item Deployed \textbf{Tableau} dashboard analytics for the Payment Card\\ Security Team's Sharepoint portal
+            \item Developed \textbf{SharePoint} portal to create a \textbf{PCI DSS} intake workflow tool and evidence repository
+            \item Identified a bug in LMS training modules during first week of work, resulting in Manager reporting issue to software vendor 
+            \item Attended consultation meetings for projects that provided \textbf{PCI DSS} security reviews across TD Bank
+            \item Deployed \textbf{Tableau} dashboard analytics for the \textbf{Payment Card Security Team's} SharePoint portal
     
         \end{itemize}
         
@@ -150,14 +149,14 @@
         %% \bigskip, \vspace etc to make adjustments.
         \medskip
         \cvsection{Certifications}
-        \cvevent{Azure Fundamentals}{Microsoft Corporation}{February 2023}{}
-        \textit{Cloud computing concepts, models, services}\\
+        \cvevent{Excel Associate}{Microsoft Corporation}{February 2023}{}
+        \textit{Exam MO-200: Microsoft Excel (Office 2019)}\\
         \medskip
         
         \divider
 
-        \cvevent{Excel Associate}{Microsoft Corporation}{February 2023}{}
-        \textit{Exam MO-200: Microsoft Excel (Office 2019)}\\
+        \cvevent{JIRA Project Administrator}{Atlassian Corporation}{February 2023}{}
+        \textit{56-hour JIRA Fundamentals training course }\\
         \medskip
         
         \cvsection{Skills}
@@ -165,8 +164,9 @@
             \cvtag{Java}
             \cvtag{C\#}
             \cvtag{Python}
+            \cvtag{VB.NET}
             \cvtag{COBOL}
-            \cvtag{SQL}\\
+            \cvtag{SQL}
             \cvtag{JCL}
             \cvtag{C++}
             
@@ -186,12 +186,11 @@
             \cvtag{SQL Server}
             \cvtag{MySQL}
             
-            \medskip
-            
             \cvsubsection{Tools}
+            \cvtag{JIRA}
+            \cvtag{Excel}
             \cvtag{VS Code}
             \cvtag{Git}
-            \cvtag{JIRA}
             \cvtag{Splunk}
             
             \medskip
